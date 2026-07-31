@@ -1,0 +1,30 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text);
+}
+h1,
+h2 {
+  font-family: var(--display);
+}
+p {
+  color: var(--muted);
+  line-height: 1.65;
+}

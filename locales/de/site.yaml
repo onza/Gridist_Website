@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — Mitdenkendes Fenster-Management"
+    description: "Gridist merkt sich Fensterpositionen pro Monitor und stellt sie beim Wechsel zwischen Laptop und externem Display automatisch wieder her. Open-Source-Menüleisten-App für macOS mit Window Snap."
+    keywords: "Gridist, macOS, Fenster-Management, Window Snap, Open Source"
+  legalNotice:
+    title: "Impressum — Gridist"
+    description: "Impressum der Gridist-Website — Angaben gemäß § 5 TMG."
+    keywords: "Impressum, Gridist"
+  privacy:
+    title: "Datenschutz — Gridist"
+    description: "Datenschutzerklärung der Gridist-Website."
+    keywords: "Datenschutz, Gridist"
+strings:
+  skipToContent: "Zum Inhalt springen"
+  mainNavigation: "Hauptnavigation"
+  language: "Sprache"
+  languageMenuAria: "Sprache wählen"
+  homeAria: "Gridist Startseite"
+  githubAria: "Gridist auf GitHub"
+  download: "Download"
+  legalNav: "Rechtliches"
+  impressum: "Impressum"
+  datenschutz: "Datenschutz"
+  licensePrefix: "Veröffentlicht unter der"
+  licenseLabel: "MIT-Lizenz"
+  rights: "Alle Rechte vorbehalten."
+  opensInNewTab: "(öffnet in neuem Tab)"

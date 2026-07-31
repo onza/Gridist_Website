@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — Gestione finestre che ricorda"
+    description: "Gridist ricorda le posizioni delle finestre per monitor e le ripristina quando passi dal laptop al display esterno. App open source per macOS nella barra dei menu con Window Snap."
+    keywords: "Gridist, macOS, gestione finestre, Window Snap, open source"
+  legalNotice:
+    title: "Note legali — Gridist"
+    description: "Note legali del sito Gridist — informazioni ai sensi del § 5 TMG."
+    keywords: "Note legali, Gridist"
+  privacy:
+    title: "Privacy — Gridist"
+    description: "Informativa sulla privacy del sito Gridist."
+    keywords: "Privacy, Gridist"
+strings:
+  skipToContent: "Vai al contenuto"
+  mainNavigation: "Navigazione principale"
+  language: "Lingua"
+  languageMenuAria: "Scegli la lingua"
+  homeAria: "Home di Gridist"
+  githubAria: "Gridist su GitHub"
+  download: "Scarica"
+  legalNav: "Note legali"
+  impressum: "Note legali"
+  datenschutz: "Privacy"
+  licensePrefix: "Rilasciato sotto la"
+  licenseLabel: "licenza MIT"
+  rights: "Tutti i diritti riservati."
+  opensInNewTab: "(si apre in una nuova scheda)"

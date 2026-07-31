@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gridist.app/schemas/site.schema.json",
+  "title": "Gridist locale site config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["seo", "strings"],
+  "properties": {
+    "seo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["home", "legalNotice", "privacy"],
+      "properties": {
+        "home": { "$ref": "#/$defs/seoPage" },
+        "legalNotice": { "$ref": "#/$defs/seoPage" },
+        "privacy": { "$ref": "#/$defs/seoPage" }
+      }
+    },
+    "strings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skipToContent",
+        "mainNavigation",
+        "language",
+        "languageMenuAria",
+        "homeAria",
+        "githubAria",
+        "download",
+        "legalNav",
+        "impressum",
+        "datenschutz",
+        "licensePrefix",
+        "licenseLabel",
+        "rights",
+        "opensInNewTab"
+      ],
+      "properties": {
+        "skipToContent": { "type": "string" },
+        "mainNavigation": { "type": "string" },
+        "language": { "type": "string" },
+        "languageMenuAria": { "type": "string" },
+        "homeAria": { "type": "string" },
+        "githubAria": { "type": "string" },
+        "download": { "type": "string" },
+        "legalNav": { "type": "string" },
+        "impressum": { "type": "string" },
+        "datenschutz": { "type": "string" },
+        "licensePrefix": { "type": "string" },
+        "licenseLabel": { "type": "string" },
+        "rights": { "type": "string" },
+        "opensInNewTab": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "seoPage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "description", "keywords"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "keywords": { "type": "string" }
+      }
+    }
+  }
+}

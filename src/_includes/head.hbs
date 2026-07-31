@@ -1,0 +1,40 @@
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<meta name='theme-color' content='{{site.themeColor}}' />
+<meta name='color-scheme' content='dark' />
+<script>(function(){var a="{{site.apex}}",h=location.hostname,o="{{site.url}}";if(h!==a&&h!=="www."+a)return;if(h==="www."+a||location.protocol==="http:")location.replace(o+location.pathname+location.search+location.hash)})()</script>
+<meta name='description' content='{{escapeAttr seo.description}}' />
+<meta name='keywords' content='{{escapeAttr seo.keywords}}' />
+<meta name='author' content='{{escapeAttr site.author}}' />
+<meta name='robots' content='{{seo.robots}}' />
+<meta name='application-name' content='{{escapeAttr site.name}}' />
+<link rel='canonical' href='{{absUrl permalink}}' />
+{{#each seo.hreflang}}
+  <link rel='alternate' hreflang='{{@key}}' href='{{absUrl this}}' />
+{{/each}}
+<meta property='og:type' content='{{seo.ogType}}' />
+<meta property='og:site_name' content='{{escapeAttr site.name}}' />
+<meta property='og:title' content='{{escapeAttr seo.title}}' />
+<meta property='og:description' content='{{escapeAttr seo.description}}' />
+<meta property='og:url' content='{{absUrl permalink}}' />
+<meta property='og:image' content='{{absUrl site.ogImage}}' />
+<meta property='og:image:alt' content='{{escapeAttr site.ogImageAlt}}' />
+<meta property='og:locale' content='{{seo.ogLocale}}' />
+{{#each seo.ogLocaleAlternates}}
+  <meta property='og:locale:alternate' content='{{this}}' />
+{{/each}}
+<meta name='twitter:card' content='{{site.twitterCard}}' />
+<meta name='twitter:title' content='{{escapeAttr seo.title}}' />
+<meta name='twitter:description' content='{{escapeAttr seo.description}}' />
+<meta name='twitter:image' content='{{absUrl site.ogImage}}' />
+<meta name='twitter:image:alt' content='{{escapeAttr site.ogImageAlt}}' />
+<link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+<link rel='icon' href='/favicon.png' type='image/png' sizes='32x32' />
+<link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+<title>{{seo.title}}</title>
+{{#if jsonLd}}
+  <script type='application/ld+json'>{{{jsonLd}}}</script>
+{{/if}}
+<script>
+  document.documentElement.classList.add('js')
+</script>

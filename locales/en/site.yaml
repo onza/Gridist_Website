@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — Window management that remembers"
+    description: "Gridist remembers window positions per monitor and restores them when you switch between laptop and external display. Open-source macOS menu bar app with Window Snap."
+    keywords: "Gridist, macOS, window management, Window Snap, open source"
+  legalNotice:
+    title: "Legal Notice — Gridist"
+    description: "Legal notice for the Gridist website — information according to § 5 TMG."
+    keywords: "Legal Notice, Gridist"
+  privacy:
+    title: "Privacy Policy — Gridist"
+    description: "Privacy policy for the Gridist website."
+    keywords: "Privacy Policy, Gridist"
+strings:
+  skipToContent: "Skip to content"
+  mainNavigation: "Main navigation"
+  language: "Language"
+  languageMenuAria: "Choose language"
+  homeAria: "Gridist home"
+  githubAria: "Gridist on GitHub"
+  download: "Download"
+  legalNav: "Legal"
+  impressum: "Legal Notice"
+  datenschutz: "Privacy Policy"
+  licensePrefix: "Released under the"
+  licenseLabel: "MIT License"
+  rights: "All rights reserved."
+  opensInNewTab: "(opens in new tab)"

@@ -1,0 +1,889 @@
+<section class='section hero'>
+        <div class='hero-stage'>
+          <div class='hero-copy'>
+            <p class='hero-tag'>Open Source · Native macOS</p>
+            <h1>Das Fenster-Management<br />das <em>mitdenkt</em>.</h1>
+            <div class='hero-rest'>
+              <div class='hero-sub'>
+                Merkt sich, wo jedes Fenster auf jedem Monitor hingehört — und stellt es beim
+                Wechsel automatisch wieder her. Per Drag &amp; Drop oder Shortcuts ordnest du
+                Fenster im Handumdrehen um.
+              </div>
+              <div class='hero-cta'>
+                <a href='#' class='btn' data-download-link aria-label='Gridist für macOS laden'>
+                  <svg
+                    width='18'
+                    height='18'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    aria-hidden='true'
+                  >
+                    <path
+                      d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'
+                    />
+                  </svg>
+                  Download für macOS
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class='hero-visual hero-visual--schematic' data-hero-visual>
+            <p class='profile-setup-label' data-mac-title>Desktop Monitor</p>
+            <div class='mac-frame'>
+              <div class='hero-demo-panels'>
+                <div class='hero-demo hero-demo-profile is-active' data-hero-panel='profile'>
+                  <div class='mac-screens' data-mac-screens>
+                    <div class='monitor monitor-primary'>
+                      <div class='monitor-inset'>
+                        <div class='window win-ide' data-window='ide'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>VS Code</span>
+                          </div>
+                        </div>
+                        <div class='window win-browser' data-window='browser'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Firefox</span>
+                          </div>
+                        </div>
+                        <div class='window win-slack' data-window='slack'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Slack</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='monitor monitor-secondary'>
+                      <div class='monitor-inset'>
+                        <div class='window win-mail hero-snap-window' data-window='mail'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Mail</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='hero-snap-layer' data-snap-layer hidden>
+                      <div class='hero-snap-mail-overlay'>
+                        <div class='hero-snap-ghost' aria-hidden='true'></div>
+                      </div>
+                      <div class='hero-snap-preview' aria-hidden='true'>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--vertical'>
+                          <div class='hero-snap-grid'>
+                            <div class='hero-snap-zone hero-snap-zone-tl'></div>
+                            <div class='hero-snap-zone hero-snap-zone-tr'></div>
+                            <div class='hero-snap-zone hero-snap-zone-bl'></div>
+                            <div class='hero-snap-zone hero-snap-zone-br'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--horizontal'>
+                          <div class='hero-snap-grid hero-snap-grid--horizontal'>
+                            <div class='hero-snap-zone hero-snap-zone-h-left'></div>
+                            <div class='hero-snap-zone hero-snap-zone-h-right'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--full'>
+                          <div class='hero-snap-grid hero-snap-grid--full'>
+                            <div class='hero-snap-zone hero-snap-zone-full'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--thirds'>
+                          <div class='hero-snap-grid hero-snap-grid--thirds'>
+                            <div class='hero-snap-zone hero-snap-zone-t-left'></div>
+                            <div class='hero-snap-zone hero-snap-zone-t-right'></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='hero-snap-cursor' aria-hidden='true'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class='demo-indicator'
+              data-demo-indicator
+              role='status'
+              aria-live='polite'
+              aria-label='Fenster-Gedächtnis'
+            >
+              <span class='demo-indicator-phase is-active' data-demo-phase='profile'
+                >Fenster-Gedächtnis</span
+              >
+              <span class='demo-indicator-phase' data-demo-phase='snap'>Window Snap</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='section list-section' id='features'>
+        <p class='hero-tag list-section__caption'>Zwei Features. Eine App.</p>
+        <div class='tile-grid'>
+          <ul class='feature-list'>
+            <li class='feature-tile'>
+              <span class='li-num' aria-hidden='true'>01</span>
+              <div>
+                <h2>Fenster-Gedächtnis</h2>
+                <p>
+                  Jedes Fenster merkt sich seine Position <em>pro Monitor</em> — automatisch, ohne
+                  Speichern. Monitor ab, Monitor an — alles landet wieder da, wo du es hattest.
+                </p>
+                <ul class='feature-tile__points'>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Position pro Fenster und Monitor, nicht nur ein Snapshot
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Display-Fingerprint erkennt Laptop vs. Schreibtisch
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Prozent-Koordinaten — passt auf jede Auflösung
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Event-getriebenes Lernen, null CPU im Idle
+                  </li>
+                </ul>
+                <a href='#fenster-gedaechtnis' class='btn btn-ghost'>So funktioniert's</a>
+              </div>
+            </li>
+            <li class='feature-tile'>
+              <span class='li-num' aria-hidden='true'>02</span>
+              <div>
+                <h2>Window Snap</h2>
+                <p>
+                  Fenster an der Titelleiste greifen, ziehen, über eine Zone — die Ghost-Vorschau
+                  zeigt das Ergebnis. Loslassen, snappen.
+                </p>
+                <ul class='feature-tile__points'>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Mini-Monitor-Vorschau mit Layout-Zonen beim Drag
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Layout-Sets — Halben, Viertel, Drittel, eigene Zonen
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Editierbare Shortcuts für Presets und Zonen
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Option-Taste blendet Snap-Zonen ein und aus
+                  </li>
+                </ul>
+                <a href='#window-snap' class='btn btn-ghost'>So funktioniert's</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class='section pitch' id='fenster-gedaechtnis'>
+        <div class='pitch-copy'>
+          <p class='hero-tag'>
+            <span class='li-num' aria-hidden='true'>01</span>
+            Fenster-Gedächtnis
+          </p>
+          <h2>Monitor weg.<br />Layout da.</h2>
+          <div class='pitch-body'>
+            <p>
+              Kein Profil speichern. Gridist merkt sich jedes Fenster pro Monitor und stellt es beim
+              Wechsel wieder her.
+            </p>
+          </div>
+        </div>
+        <div
+          class='profile-demo profile-demo--schematic'
+          data-profile-section-demo
+          aria-hidden='true'
+        >
+          <p class='profile-setup-label' data-profile-demo-title>Desktop Monitor</p>
+          <div class='mac-frame'>
+            <div class='mac-screens is-single' data-profile-demo-screens>
+              <div class='monitor monitor-primary'>
+                <div class='monitor-inset'>
+                  <div class='window' data-profile-window='1'></div>
+                  <div class='window' data-profile-window='2'></div>
+                  <div class='window' data-profile-window='3'></div>
+                  <div class='window' data-profile-window='4'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class='profile-caption'>Monitor ab → Layout wieder da</p>
+        </div>
+        <ul class='feature-list'>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-layout-grid' aria-hidden='true'></span>
+              Arrangieren &amp; vergessen
+            </h3>
+            <p>
+              Ordne deine Fenster einmal so an, wie du sie haben willst — auf dem MacBook, am
+              Schreibtisch, überall. Gridist merkt sich jede Position automatisch pro Monitor.
+            </p>
+          </li>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-eye' aria-hidden='true'></span>
+              Monitor-Wechsel erkennen
+            </h3>
+            <p>
+              Kabel raus oder rein — der Display-Fingerprint ändert sich, Gridist weiß Bescheid und
+              greift auf das passende Fenster-Gedächtnis zu.
+            </p>
+          </li>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-rotate-ccw' aria-hidden='true'></span>
+              Automatisch wiederherstellen
+            </h3>
+            <p>
+              Jedes offene Fenster springt an seine zuletzt gemerkte Position auf dem jetzt aktiven
+              Monitor. Prozent-Koordinaten passen auf jede Auflösung.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class='section pitch' id='window-snap'>
+        <div class='pitch-copy'>
+          <p class='hero-tag'>
+            <span class='li-num' aria-hidden='true'>02</span>
+            Window Snap
+          </p>
+          <h2>Ziehen. Loslassen. Snappen.</h2>
+          <div class='pitch-body'>
+            <p>
+              Titelleiste greifen und ziehen — eine Mini-Monitor-Vorschau mit deinen Layout-Zonen
+              erscheint. Maus über die Zelle, der Ghost-Umriss zeigt das Ergebnis. Loslassen —
+              fertig.
+            </p>
+            <ul class='feature-tile__points'>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                Built-in-Sets: Halben, Viertel, Drittel, Zwei Drittel, Vollbild
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                Eigene Layout-Sets mit überlappenden Zonen
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                Option-Taste blendet Zonen ein und aus
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                Editierbare Shortcuts für Presets und Custom-Zonen
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='snap-demo snap-demo--schematic' data-snap-section-demo aria-hidden='true'>
+          <div class='mac-frame'>
+            <div class='mac-screens is-single' data-snap-demo-screens>
+              <div class='monitor monitor-secondary'>
+                <div class='monitor-inset'>
+                  <div class='window hero-snap-window' data-snap-window>
+                    <div class='win-chrome'>
+                      <span class='win-title' aria-hidden='true'>Fenster</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='hero-snap-layer' data-snap-layer hidden>
+                <div class='hero-snap-mail-overlay'>
+                  <div class='hero-snap-ghost' aria-hidden='true'></div>
+                </div>
+                <div class='hero-snap-preview' aria-hidden='true'>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--vertical'>
+                    <div class='hero-snap-grid'>
+                      <div class='hero-snap-zone hero-snap-zone-tl'></div>
+                      <div class='hero-snap-zone hero-snap-zone-tr'></div>
+                      <div class='hero-snap-zone hero-snap-zone-bl'></div>
+                      <div class='hero-snap-zone hero-snap-zone-br'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--horizontal'>
+                    <div class='hero-snap-grid hero-snap-grid--horizontal'>
+                      <div class='hero-snap-zone hero-snap-zone-h-left'></div>
+                      <div class='hero-snap-zone hero-snap-zone-h-right'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--full'>
+                    <div class='hero-snap-grid hero-snap-grid--full'>
+                      <div class='hero-snap-zone hero-snap-zone-full'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--thirds'>
+                    <div class='hero-snap-grid hero-snap-grid--thirds'>
+                      <div class='hero-snap-zone hero-snap-zone-t-left'></div>
+                      <div class='hero-snap-zone hero-snap-zone-t-right'></div>
+                    </div>
+                  </div>
+                </div>
+                <div class='hero-snap-cursor' aria-hidden='true'></div>
+              </div>
+            </div>
+          </div>
+          <p class='snap-caption'>Ziehen → Loslassen → Snappen</p>
+        </div>
+      </section>
+      <section class='section how' id='so-arbeitest-du'>
+        <div class='how-intro'>
+          <p class='hero-tag'>So arbeitest du damit</p>
+          <h2>Menü und Einstellungen.</h2>
+        </div>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Immer erreichbar</p>
+            <h3>Menüleiste</h3>
+            <p>
+              Über das Menüleisten-Icon siehst du alle verbundenen Monitore mit Auflösung, optional
+              die offenen Fenster inkl. Position, und schaltest Lernen, Auto-Restore sowie Snap per
+              Shortcut und Snap per Drag getrennt ein oder aus. Einstellungen und Beenden sitzen
+              darunter.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--menu' aria-hidden='true'>
+              <div class='gi-menu'>
+                <div class='gi-menu__row'>
+                  Built-in Retina Display — 3024 × 1964 <span class='gi-menu__menubar-icon'></span>
+                </div>
+                <div class='gi-menu__row is-selected'>
+                  DELL U2720Q — 3840 × 2160 <span class='gi-menu__check'></span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__action'>Aktuelle Fenster ausblenden</div>
+                <div class='gi-menu__meta'>3 Fenster aktiv · DELL U2720Q</div>
+                <div class='gi-menu__window'>
+                  <span>VS Code — gridist</span>
+                  <span>12%, 8% · 48% × 78%</span>
+                </div>
+                <div class='gi-menu__window'>
+                  <span>Firefox — Docs</span>
+                  <span>52%, 8% · 46% × 55%</span>
+                </div>
+                <div class='gi-menu__window'>
+                  <span>Mail — Posteingang</span>
+                  <span>52%, 66% · 46% × 28%</span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__toggle'>
+                  <span>Fensterpositionen merken</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>Bei Monitorwechsel automatisch wiederherstellen</span
+                  ><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>Snap per Shortcut</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>Snap per Drag</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__action'>Einstellungen</div>
+                <div class='gi-menu__action'>Beenden</div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Login &amp; Updates</p>
+            <h3>Allgemein</h3>
+            <p>
+              Im ersten Einstellungen-Tab startest du Gridist optional beim Login und steuerst
+              Updates: automatisch suchen, ohne Nachfrage installieren, oder manuell prüfen. Die
+              aktuelle Version steht direkt darunter.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist Einstellungen</span>
+              </div>
+              <div class='gi-tabs'>
+                <span class='is-active'>Allgemein</span>
+                <span>Shortcuts</span>
+                <span>Layout-Sets</span>
+                <span>Positionierung</span>
+                <span>Fenster-Gedächtnis</span>
+              </div>
+              <div class='gi-pane'>
+                <div class='gi-menu__toggle'>
+                  <span>Gridist beim Login starten</span><span class='gi-switch is-on'></span>
+                </div>
+                <p class='gi-pane__subhead'>Updates</p>
+                <div class='gi-menu__toggle'>
+                  <span>Automatisch nach Updates suchen</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>Updates ohne Nachfrage installieren</span><span class='gi-switch'></span>
+                </div>
+                <p class='gi-pane__caption'>Aktuelle Version: 1.0.0</p>
+                <div class='gi-toolbar'>
+                  <span class='gi-btn'>Jetzt prüfen</span>
+                </div>
+                <p class='gi-pane__hint'>
+                  Sucht nach neuen Versionen und kann sie direkt in der App installieren.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Window Snap</p>
+            <h3>Shortcuts</h3>
+            <p>
+              Basis- und Custom-Kürzel im zweispaltigen Raster: Feld anklicken, komplette
+              Kombination drücken (beliebige Modifier + Taste). Mini-Vorschau zeigt die Zone, ×
+              schaltet aus. Defaults entsprechen Rectangle — inkl. Viertel.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist Einstellungen</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>Allgemein</span>
+                <span class='is-active'>Shortcuts</span>
+                <span>Layout-Sets</span>
+                <span>Positionierung</span>
+                <span>Fenster-Gedächtnis</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__subhead'>Basis</p>
+                <p class='gi-pane__caption'>
+                  Klicke ein Feld und drücke die komplette Tastenkombination (beliebige Modifier +
+                  Taste), wie in Rectangle.
+                </p>
+                <div class='gi-shortcut-grid'>
+                  <div class='gi-shortcut'>
+                    <span>Links 1/2</span><span class='gi-mini gi-mini--left'></span><kbd>⌃⌥←</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Rechts 1/2</span><span class='gi-mini gi-mini--right'></span><kbd>⌃⌥→</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Oben 1/2</span><span class='gi-mini gi-mini--top'></span><kbd>⌃⌥↑</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Unten 1/2</span><span class='gi-mini gi-mini--bottom'></span><kbd>⌃⌥↓</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Maximieren</span><span class='gi-mini gi-mini--full'></span><kbd>⌃⌥↩</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Oben links 1/4</span><span class='gi-mini gi-mini--qtl'></span
+                    ><kbd>⌃⌥U</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Oben rechts 1/4</span><span class='gi-mini gi-mini--qtr'></span
+                    ><kbd>⌃⌥I</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Unten links 1/4</span><span class='gi-mini gi-mini--qbl'></span
+                    ><kbd>⌃⌥J</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Unten rechts 1/4</span><span class='gi-mini gi-mini--qbr'></span
+                    ><kbd>⌃⌥K</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Links 1/3</span><span class='gi-mini gi-mini--t1'></span><kbd>⌃⌥D</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Mitte 1/3</span><span class='gi-mini gi-mini--t2'></span><kbd>⌃⌥F</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>Rechts 1/3</span><span class='gi-mini gi-mini--t3'></span><kbd>⌃⌥G</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                </div>
+                <p class='gi-pane__hint'>Esc bricht ab · × schaltet ein Kürzel aus</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Deine Zonen, deine Sets</p>
+            <h3>Layout-Sets</h3>
+            <p>
+              Snap-Vorlagen inkl. Vollbild, Halben, Viertel, Drittel und Zwei Drittel — plus eigene
+              Sets. Jede Zeile zeigt Mini-Vorschau, Zonennamen und ob es Standard, angepasst oder
+              Custom ist. Mit + anlegen, Doppelklick bearbeiten, per Drag sortieren.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist Einstellungen</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>Allgemein</span>
+                <span>Shortcuts</span>
+                <span class='is-active'>Layout-Sets</span>
+                <span>Positionierung</span>
+                <span>Fenster-Gedächtnis</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>Layout-Sets</p>
+                <div class='gi-set-list'>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--full gi-mini--lg'></span>
+                    <div>
+                      <strong>Vollbild</strong>
+                      <small>Vollbild</small>
+                      <small>Standard · Shortcuts</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row is-selected'>
+                    <span class='gi-mini gi-mini--halves gi-mini--lg'></span>
+                    <div>
+                      <strong>Links / Rechts</strong>
+                      <small>Links 1/2 · Rechts 1/2</small>
+                      <small>Standard · Shortcuts</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--tb gi-mini--lg'></span>
+                    <div>
+                      <strong>Oben / Unten</strong>
+                      <small>Oben 1/2 · Unten 1/2</small>
+                      <small>Standard · Shortcuts</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--quarters gi-mini--lg'></span>
+                    <div>
+                      <strong>Viertel</strong>
+                      <small>Oben links · Oben rechts · …</small>
+                      <small>Standard · Shortcuts</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--thirds gi-mini--lg'></span>
+                    <div>
+                      <strong>Drittel</strong>
+                      <small>Links 1/3 · Mitte 1/3 · Rechts 1/3</small>
+                      <small>Standard · Shortcuts</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                </div>
+                <div class='gi-toolbar'>
+                  <span class='gi-btn'>+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Set bearbeiten</p>
+            <h3>Layout-Set bearbeiten</h3>
+            <p>
+              Im Sheet ziehst du Zonen auf dem 24×24-Raster (Darstellung 16:9). Modi: Neue Zone oder
+              Bereich anpassen. Jede Zone hat Namen, Zellenmaß in Prozent und optional ein eigenes
+              Kürzel. Built-ins lassen sich auf Standard zurücksetzen.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--with-sheet' aria-hidden='true'>
+              <div class='gi-screen__frame'>
+                <div class='gi-chrome'>
+                  <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                  ><span class='gi-chrome__dot'></span>
+                  <span class='gi-chrome__title'>Gridist Einstellungen</span>
+                </div>
+                <div class='gi-tabs'>
+                  <span>Allgemein</span>
+                  <span>Shortcuts</span>
+                  <span class='is-active'>Layout-Sets</span>
+                  <span>Positionierung</span>
+                  <span>Fenster-Gedächtnis</span>
+                </div>
+                <div class='gi-sheet-scrim'></div>
+              </div>
+              <div class='gi-sheet'>
+                <p class='gi-sheet__title'>Set bearbeiten</p>
+                <div class='gi-sheet__name'>
+                  <span>Name:</span>
+                  <span class='gi-field'>Links / Rechts</span>
+                </div>
+                <div class='gi-sheet__layout-head'>
+                  <span class='gi-pane__headline'>Bildschirm-Layout</span>
+                  <span class='gi-pane__hint'>Raster 24 × 24</span>
+                </div>
+                <div class='gi-mode-btns'>
+                  <span class='gi-btn is-active'>Neue Zone</span>
+                  <span class='gi-btn'>Bereich anpassen</span>
+                </div>
+                <div class='gi-editor'>
+                  <div class='gi-editor__zone gi-editor__zone--left'></div>
+                  <div class='gi-editor__zone gi-editor__zone--right is-selected'></div>
+                </div>
+                <p class='gi-pane__headline'>Zonen</p>
+                <p class='gi-pane__hint'>
+                  Kürzel stammen aus den Basis-Shortcuts (Window Snap) und sind hier vorausgefüllt.
+                </p>
+                <div class='gi-zone-head'>
+                  <span>Name</span><span>Raster</span><span>Kürzel ⌃⌥</span>
+                </div>
+                <div class='gi-zone-row'>
+                  <span class='gi-field'>Links 1/2</span>
+                  <span>12 × 24 Zellen · 50.0% × 100.0%</span>
+                  <kbd>⌃⌥←</kbd>
+                </div>
+                <div class='gi-zone-row is-selected'>
+                  <span class='gi-field'>Rechts 1/2</span>
+                  <span>12 × 24 Zellen · 50.0% × 100.0%</span>
+                  <kbd>⌃⌥→</kbd>
+                </div>
+                <div class='gi-sheet__footer'>
+                  <span class='gi-btn'>Standard wiederherstellen</span>
+                  <span class='gi-sheet__spacer'></span>
+                  <span class='gi-btn'>Abbrechen</span>
+                  <span class='gi-btn gi-btn--accent'>Fertig</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Bildschirmposition</p>
+            <h3>Positionierung</h3>
+            <p>
+              Steuert die Mini-Monitor-Vorschau beim Drag-Snap: Icons horizontal oder vertikal,
+              Position auf dem Bildschirm per Slider, Breite der Vorschau in Pixeln. So liegt die
+              Zone-Preview genau dort, wo du sie brauchst.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist Einstellungen</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>Allgemein</span>
+                <span>Shortcuts</span>
+                <span>Layout-Sets</span>
+                <span class='is-active'>Positionierung</span>
+                <span>Fenster-Gedächtnis</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>Ausrichtung</p>
+                <div class='gi-radio is-on'>Icons horizontal anordnen</div>
+                <div class='gi-radio'>Icons vertikal anordnen</div>
+                <p class='gi-pane__headline'>Bildschirmposition</p>
+                <div class='gi-placement'>
+                  <div class='gi-placement__monitor'>
+                    <div class='gi-placement__cluster'>
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class='gi-placement__vslider'><span></span></div>
+                  <div class='gi-placement__hslider'><span></span></div>
+                </div>
+                <p class='gi-pane__headline'>Abmessungen</p>
+                <div class='gi-stepper'>
+                  <span>Vorschau-Breite</span>
+                  <span class='gi-field'>220</span>
+                  <span class='gi-stepper__btns'>▾ ▴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Gespeicherte Positionen</p>
+            <h3>Fenster-Gedächtnis</h3>
+            <p>
+              Listet gemerkte Positionen pro Monitor: Fenster-Sessions und App-Defaults. Monitore
+              mit „verbunden“ sind aktuell da. Einträge zeigen Titel, Art und Prozent-Rechteck. Alle
+              Positionen löschen leert den Speicher unwiderruflich.
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist Einstellungen</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>Allgemein</span>
+                <span>Shortcuts</span>
+                <span>Layout-Sets</span>
+                <span>Positionierung</span>
+                <span class='is-active'>Fenster-Gedächtnis</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>Gespeicherte Positionen</p>
+                <p class='gi-pane__caption'>
+                  12 Fenster-Sessions · 4 App-Defaults — zum Wiederherstellen gemerkt
+                </p>
+                <div class='gi-memory-monitors'>
+                  <div class='gi-menu__row is-selected'>
+                    Built-in Retina Display — 3024 × 1964 <span class='gi-badge'>verbunden</span
+                    ><span class='gi-menu__check'></span>
+                  </div>
+                  <div class='gi-menu__row'>
+                    DELL U2720Q — 3840 × 2160 <span class='gi-badge'>verbunden</span>
+                  </div>
+                </div>
+                <p class='gi-pane__meta'>8 gespeichert · Built-in Retina Display</p>
+                <div class='gi-memory-list'>
+                  <div class='gi-menu__window'>
+                    <span>VS Code — gridist</span><span>Session · 8%, 6% · 55% × 80%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Firefox</span><span>Session · 64%, 6% · 34% × 50%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Slack</span><span>App-Default · 64%, 58% · 34% × 36%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Mail</span><span>Session · 8%, 70% · 40% × 24%</span>
+                  </div>
+                </div>
+                <div class='gi-toolbar gi-toolbar--end'>
+                  <span class='gi-btn gi-btn--danger'>Alle Positionen löschen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class='section download' id='download'>
+        <p class='hero-tag'>Kostenlos · Open Source · Nativ</p>
+        <h2>Hol's dir.</h2>
+        <div class='download-actions download-actions--large'>
+          <div class='download-action'>
+            <a
+              href='#'
+              class='btn btn-large'
+              data-download-link
+              aria-label='Gridist für macOS laden'
+            >
+              <svg
+                width='18'
+                height='18'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                aria-hidden='true'
+              >
+                <path
+                  d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'
+                />
+              </svg>
+              Download für macOS
+            </a>
+            <span class='download-arch'>macOS 14+</span>
+          </div>
+          <div class='download-action'>
+            <a
+              href='#'
+              class='btn btn-ghost btn-large'
+              data-github-link
+              aria-label='Gridist auf GitHub ansehen'
+            >
+              <svg
+                width='18'
+                height='18'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                aria-hidden='true'
+              >
+                <path
+                  d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z'
+                />
+              </svg>
+              Auf GitHub
+            </a>
+          </div>
+        </div>
+        <p class='download-version'>Version <span data-release-version>0.0.0</span></p>
+        <div class='download-install'>
+          <article class='install-panel'>
+            <h3>Installation</h3>
+            <ol>
+              <li>Release von GitHub laden und App öffnen</li>
+              <li>Bedienungshilfen und Eingabekontrolle erlauben</li>
+              <li>Fenster anordnen — Gridist merkt sich den Rest</li>
+            </ol>
+          </article>
+        </div>
+      </section>

@@ -1,0 +1,25 @@
+<footer class='footer'>
+  <div class='footer-col'>
+    <p class='footer-meta'>
+      <span>{{t.licensePrefix}}</span>
+      <a href='{{site.licenseUrl}}' data-license-link target='_blank' rel='noopener noreferrer'>{{t.licenseLabel}}</a>
+    </p>
+    <p class='footer-meta'>
+      <span>&copy; <span data-year></span></span>
+      <a href='{{site.companyUrl}}' target='_blank' rel='noopener noreferrer'>{{site.companyName}}.<span class='visually-hidden'>{{t.opensInNewTab}}</span></a>
+      <span>{{t.rights}}</span>
+    </p>
+  </div>
+  <nav class='footer-nav' aria-label='{{t.legalNav}}'>
+    {{#if (eq permalink paths.legalNotice)}}
+      <a href='{{paths.legalNotice}}' aria-current='page'>{{t.impressum}}</a>
+    {{else}}
+      <a href='{{paths.legalNotice}}'>{{t.impressum}}</a>
+    {{/if}}
+    {{#if (eq permalink paths.privacy)}}
+      <a href='{{paths.privacy}}' aria-current='page'>{{t.datenschutz}}</a>
+    {{else}}
+      <a href='{{paths.privacy}}'>{{t.datenschutz}}</a>
+    {{/if}}
+  </nav>
+</footer>

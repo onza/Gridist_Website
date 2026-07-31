@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — 記憶するウィンドウ管理"
+    description: "Gridist はモニターごとにウィンドウの位置を記憶し、ノート PC と外部ディスプレイの切り替え時に自動で復元します。Window Snap 対応のオープンソース macOS メニューバーアプリ。"
+    keywords: "Gridist, macOS, ウィンドウ管理, Window Snap, オープンソース"
+  legalNotice:
+    title: "法的通知 — Gridist"
+    description: "Gridist ウェブサイトの法的通知 — § 5 TMG に基づく情報。"
+    keywords: "法的通知, Gridist"
+  privacy:
+    title: "プライバシーポリシー — Gridist"
+    description: "Gridist ウェブサイトのプライバシーポリシー。"
+    keywords: "プライバシーポリシー, Gridist"
+strings:
+  skipToContent: "コンテンツへスキップ"
+  mainNavigation: "メインナビゲーション"
+  language: "言語"
+  languageMenuAria: "言語を選択"
+  homeAria: "Gridist ホーム"
+  githubAria: "GitHub の Gridist"
+  download: "ダウンロード"
+  legalNav: "法的情報"
+  impressum: "法的通知"
+  datenschutz: "プライバシー"
+  licensePrefix: "ライセンス："
+  licenseLabel: "MIT ライセンス"
+  rights: "無断転載を禁じます。"
+  opensInNewTab: "（新しいタブで開く）"

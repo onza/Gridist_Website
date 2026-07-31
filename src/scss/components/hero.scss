@@ -1,0 +1,92 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.hero {
+  position: relative;
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
+  width: var(--w-website);
+  margin-inline: auto;
+  padding: calc(var(--header-h) + 1rem + 5rem) 0 3rem;
+  overflow: visible;
+  .hero-stage {
+    position: relative;
+    display: grid;
+    gap: 3.5rem;
+    align-items: start;
+    width: 100%;
+    overflow: visible;
+    @media (min-width: 60rem) {
+      grid-template-columns: 40rem 1fr;
+      gap: 4rem;
+    }
+  }
+  .hero-copy {
+    min-width: 0;
+    @media (min-width: 60rem) {
+      width: 40rem;
+      max-width: 100%;
+    }
+  }
+  .hero-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2.7rem, 9vw, 5.4rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0;
+    width: 100%;
+    em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-dim) 60%, #86efac 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .hero-rest {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    min-width: 0;
+    margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .hero-sub {
+    font-size: clamp(1.125rem, 1rem + 0.65vw, 1.5rem);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: none;
+  }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    @media (min-width: 60rem) {
+      width: calc(100% + 12.5rem);
+      margin-right: -12.5rem;
+      align-items: stretch;
+    }
+  }
+  .hero-visual--schematic .mac-frame,
+  .hero-visual--schematic .profile-setup-label {
+    @media (min-width: 60rem) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

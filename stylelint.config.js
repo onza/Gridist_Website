@@ -1,0 +1,21 @@
+export default {
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier-scss'],
+  ignoreFiles: ['build/**', 'node_modules/**'],
+  rules: {
+    'selector-class-pattern': null,
+    'custom-property-pattern': null,
+    'keyframes-name-pattern': null,
+    'no-descending-specificity': null,
+    'scss/comment-no-empty': null,
+    'hue-degree-notation': null,
+    'alpha-value-notation': null,
+    'custom-property-empty-line-before': null,
+    'property-no-vendor-prefix': null,
+    'media-feature-range-notation': null,
+    'selector-not-notation': null,
+    'declaration-block-no-redundant-longhand-properties': null,
+    'rule-empty-line-before': null,
+    'declaration-empty-line-before': null,
+    'scss/double-slash-comment-empty-line-before': null,
+  },
+}

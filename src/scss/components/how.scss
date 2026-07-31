@@ -1,0 +1,74 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.how {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 6.5rem);
+  .how-intro {
+    max-width: none;
+    text-align: center;
+    align-self: stretch;
+    h2 {
+      font-family: var(--display);
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: none;
+      margin-inline: auto;
+    }
+  }
+}
+.how-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
+  @media (min-width: 56.25rem) {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.15fr);
+    gap: 3.5rem;
+    &--flip .how-copy {
+      order: 2;
+    }
+    &--flip .how-visual {
+      order: 1;
+    }
+  }
+}
+.js .how-row {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.how-row.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.how-copy {
+  h3 {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+  }
+  > p:not(.hero-tag) {
+    font-size: 1.125rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+}
+.how-visual {
+  width: 100%;
+  min-width: 0;
+  &:has(.gi-screen--with-sheet) {
+    overflow: visible;
+    padding-inline: 1.25rem;
+  }
+}

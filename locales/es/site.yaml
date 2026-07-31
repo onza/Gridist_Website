@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — Gestión de ventanas que recuerda"
+    description: "Gridist recuerda las posiciones de las ventanas por monitor y las restaura al cambiar entre portátil y pantalla externa. App de código abierto para la barra de menú de macOS con Window Snap."
+    keywords: "Gridist, macOS, gestión de ventanas, Window Snap, código abierto"
+  legalNotice:
+    title: "Aviso legal — Gridist"
+    description: "Aviso legal del sitio web Gridist — información según § 5 TMG."
+    keywords: "Aviso legal, Gridist"
+  privacy:
+    title: "Política de privacidad — Gridist"
+    description: "Política de privacidad del sitio web Gridist."
+    keywords: "Política de privacidad, Gridist"
+strings:
+  skipToContent: "Saltar al contenido"
+  mainNavigation: "Navegación principal"
+  language: "Idioma"
+  languageMenuAria: "Elegir idioma"
+  homeAria: "Inicio de Gridist"
+  githubAria: "Gridist en GitHub"
+  download: "Descargar"
+  legalNav: "Legal"
+  impressum: "Aviso legal"
+  datenschutz: "Privacidad"
+  licensePrefix: "Publicado bajo la"
+  licenseLabel: "licencia MIT"
+  rights: "Todos los derechos reservados."
+  opensInNewTab: "(se abre en una pestaña nueva)"

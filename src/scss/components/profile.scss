@@ -1,0 +1,235 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.profile-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-inline: auto;
+}
+.js .profile-demo {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.profile-demo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.profile-caption {
+  font-size: var(--size-caption);
+  font-family: var(--mono);
+  color: var(--dim);
+}
+.profile-setup-label {
+  font-size: var(--size-caption);
+  font-family: var(--mono);
+  font-weight: 500;
+  color: rgb(74 222 128 / 0.75);
+  text-align: center;
+}
+.snap-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.js .snap-demo {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.snap-demo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.snap-caption {
+  font-size: var(--size-caption);
+  font-family: var(--mono);
+  color: var(--dim);
+}
+.hero-visual--schematic,
+.snap-demo--schematic,
+.profile-demo--schematic {
+  width: 100%;
+}
+.hero-visual--schematic .mac-frame,
+.snap-demo--schematic .mac-frame,
+.profile-demo--schematic .mac-frame {
+  width: 100%;
+  border-radius: 0;
+  background: rgb(74 222 128 / 0.02);
+  border: 0.0625rem solid rgb(74 222 128 / 0.18);
+  box-shadow: none;
+  overflow: hidden;
+}
+.hero-visual--schematic .mac-frame {
+  max-width: 32.5rem;
+}
+.snap-demo--schematic .mac-frame,
+.profile-demo--schematic .mac-frame {
+  max-width: none;
+}
+.hero-visual--schematic .hero-demo-panels,
+.hero-visual--schematic .mac-screens,
+.snap-demo--schematic .mac-screens,
+.profile-demo--schematic .mac-screens {
+  background: rgb(74 222 128 / 0.02);
+}
+.snap-demo--schematic .mac-screens,
+.profile-demo--schematic .mac-screens {
+  min-height: 0;
+  aspect-ratio: 26 / 15;
+  height: auto;
+  overflow: hidden;
+}
+.profile-demo--schematic .profile-setup-label {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+.hero-visual--schematic .monitor-primary,
+.hero-visual--schematic .monitor-secondary,
+.snap-demo--schematic .monitor-primary,
+.snap-demo--schematic .monitor-secondary,
+.profile-demo--schematic .monitor-primary,
+.profile-demo--schematic .monitor-secondary {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.hero-visual--schematic .monitor-inset,
+.snap-demo--schematic .monitor-inset,
+.profile-demo--schematic .monitor-inset {
+  overflow: hidden;
+}
+.hero-visual--schematic .window,
+.snap-demo--schematic .window,
+.profile-demo--schematic .window {
+  background: var(--schematic-window-fill) !important;
+  border: 0.125rem solid var(--schematic-window-stroke) !important;
+  border-radius: 0;
+  transition: none;
+}
+.hero-visual--schematic .win-chrome,
+.hero-visual--schematic .win-title,
+.snap-demo--schematic .win-chrome,
+.snap-demo--schematic .win-title {
+  display: none;
+}
+.hero-visual--schematic .hero-snap-window.is-dragging,
+.snap-demo--schematic .hero-snap-window.is-dragging {
+  z-index: 2;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.45);
+}
+.hero-visual--schematic .hero-snap-preview-bezel,
+.snap-demo--schematic .hero-snap-preview-bezel {
+  flex: 0 0 var(--snap-bezel-size, 4.6875rem);
+  width: var(--snap-bezel-size, 4.6875rem);
+  max-width: var(--snap-bezel-size, 4.6875rem);
+  min-width: 0;
+  padding: 0.1875rem;
+  border-radius: 0;
+  background: var(--glass-bg-elevated);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 0.0625rem solid rgb(74 222 128 / 0.45);
+  box-shadow: var(--shadow-card), var(--glass-highlight);
+  opacity: 0.55;
+  transition: opacity 0.25s var(--ease-out), background 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+.hero-visual--schematic .hero-snap-preview-bezel.is-snap-preview-active,
+.snap-demo--schematic .hero-snap-preview-bezel.is-snap-preview-active {
+  opacity: 1;
+  border-color: rgb(74 222 128 / 0.7);
+}
+.hero-visual--schematic .hero-snap-grid,
+.snap-demo--schematic .hero-snap-grid {
+  border-radius: 0;
+  background: transparent;
+  border-color: rgb(74 222 128 / 0.22);
+}
+.hero-visual--schematic .hero-snap-zone,
+.snap-demo--schematic .hero-snap-zone {
+  border-radius: 0;
+}
+.hero-visual--schematic .hero-snap-ghost,
+.snap-demo--schematic .hero-snap-ghost {
+  border-radius: 0;
+  border: 0.125rem dashed var(--schematic-window-stroke);
+  background: transparent;
+}
+.hero-visual--schematic .profile-setup-label {
+  width: 100%;
+  max-width: 32.5rem;
+  margin: 0;
+}
+.hero-visual--schematic .hero-snap-preview {
+  width: auto;
+  max-width: calc(100% - 2 * var(--win-inset, 0.625rem));
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--snap-bezel-gap, 0.5rem);
+  z-index: 5;
+}
+.hero-visual--schematic .hero-snap-zone {
+  border-color: rgb(74 222 128 / 0.35);
+  background: rgb(74 222 128 / 0.02);
+}
+.hero-visual--schematic .hero-snap-preview-bezel--thirds .hero-snap-zone-t-left {
+  width: 60%;
+}
+.hero-visual--schematic .hero-snap-preview-bezel--thirds .hero-snap-zone-t-right {
+  width: 26%;
+}
+.snap-demo--schematic .mac-screens.is-single .monitor-secondary {
+  width: auto;
+  opacity: 1;
+  overflow: visible;
+  pointer-events: auto;
+}
+.profile-demo--schematic .window {
+  z-index: 1;
+}
+.profile-demo--schematic [data-profile-window='2'] {
+  z-index: 2;
+}
+.profile-demo--schematic [data-profile-window='3'] {
+  z-index: 3;
+}
+.profile-demo--schematic [data-profile-window='4'] {
+  z-index: 1;
+}
+.snap-demo--schematic .hero-snap-preview {
+  width: auto;
+  max-width: calc(100% - 2 * var(--win-inset, 0.625rem));
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--snap-bezel-gap, 0.5rem);
+  z-index: 5;
+}
+.snap-demo--schematic .hero-snap-preview-bezel.is-snap-preview-active {
+  opacity: 1;
+  background: var(--glass-bg-elevated);
+  border-color: rgb(74 222 128 / 0.7);
+  box-shadow: var(--shadow-card), var(--glass-highlight);
+}
+.snap-demo--schematic .hero-snap-preview-bezel[hidden] {
+  display: none;
+}
+.snap-demo--schematic .hero-snap-zone {
+  border-radius: 0;
+  border-color: rgb(74 222 128 / 0.35);
+  background: rgb(74 222 128 / 0.02);
+}
+.snap-demo--schematic .hero-snap-preview-bezel--thirds .hero-snap-zone-t-left {
+  width: 60%;
+}
+.snap-demo--schematic .hero-snap-preview-bezel--thirds .hero-snap-zone-t-right {
+  width: 26%;
+}

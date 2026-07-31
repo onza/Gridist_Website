@@ -1,0 +1,80 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  justify-content: center;
+  align-items: flex-start;
+  &--large {
+    gap: 1.25rem 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
+.download-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: min(100%, 14rem);
+}
+.download-arch {
+  font-family: var(--mono);
+  font-size: var(--size-label);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.download {
+  text-align: center;
+  h2 {
+    font-family: var(--display);
+    font-size: clamp(2.25rem, 6vw, 3.75rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  > p:not(.hero-tag) {
+    font-size: 1.125rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    max-width: 35rem;
+    margin-inline: auto;
+  }
+  .download-version {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--dim);
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+  }
+}
+.download-install {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+  text-align: left;
+  max-width: 35rem;
+  margin-inline: auto;
+}
+.install-panel {
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+  ol {
+    margin: 0 0 0 1.25rem;
+    padding: 0;
+    color: var(--muted);
+    li {
+      line-height: 1.65;
+      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+  }
+}

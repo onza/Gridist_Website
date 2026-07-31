@@ -1,0 +1,28 @@
+seo:
+  home:
+    title: "Gridist — Gerenciamento de janelas que lembra"
+    description: "O Gridist lembra posições de janelas por monitor e as restaura quando você alterna entre laptop e monitor externo. App de código aberto para macOS na barra de menus com Window Snap."
+    keywords: "Gridist, macOS, gerenciamento de janelas, Window Snap, código aberto"
+  legalNotice:
+    title: "Aviso legal — Gridist"
+    description: "Aviso legal do site Gridist — informações conforme § 5 TMG."
+    keywords: "Aviso legal, Gridist"
+  privacy:
+    title: "Privacidade — Gridist"
+    description: "Política de privacidade do site Gridist."
+    keywords: "Privacidade, Gridist"
+strings:
+  skipToContent: "Ir para o conteúdo"
+  mainNavigation: "Navegação principal"
+  language: "Idioma"
+  languageMenuAria: "Escolher idioma"
+  homeAria: "Início do Gridist"
+  githubAria: "Gridist no GitHub"
+  download: "Baixar"
+  legalNav: "Jurídico"
+  impressum: "Aviso legal"
+  datenschutz: "Privacidade"
+  licensePrefix: "Publicado sob a"
+  licenseLabel: "licença MIT"
+  rights: "Todos os direitos reservados."
+  opensInNewTab: "(abre em nova aba)"

@@ -1,0 +1,113 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.list-section {
+  padding-top: calc(var(--section-gap) + 2.5rem);
+  --size-h2-feature: clamp(1.75rem, 4vw, 2.5rem);
+  .list-section__caption {
+    margin: 0 0 2.5rem;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: var(--size-label);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: var(--accent);
+  }
+  .feature-tile h2 {
+    font-family: var(--display);
+    font-size: var(--size-h2-feature);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .feature-tile .li-num {
+    font-size: var(--size-h2-feature);
+    line-height: 1.15;
+  }
+  .tile-grid {
+    gap: 3.5rem;
+    @media (min-width: 840px) {
+      gap: 4.5rem;
+    }
+  }
+}
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  @media (min-width: 840px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.feature-list {
+  display: contents;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.feature-tile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
+  h3 {
+    font-size: var(--size-h3, clamp(1.375rem, 2.5vw, 1.75rem));
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: none;
+  }
+  a.btn {
+    margin-top: 1.25rem;
+  }
+  .li-num {
+    padding-top: 0.1em;
+    font-family: var(--mono);
+    font-size: var(--size-h3, clamp(1.375rem, 2.5vw, 1.75rem));
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--dim);
+  }
+  &__points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+}
+.js .feature-tile {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.feature-tile.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feature-tile__points li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+.compare-icon {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.compare-icon--positive {
+  color: var(--accent);
+}

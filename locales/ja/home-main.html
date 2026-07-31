@@ -1,0 +1,864 @@
+<section class='section hero'>
+        <div class='hero-stage'>
+          <div class='hero-copy'>
+            <p class='hero-tag'>オープンソース · ネイティブ macOS</p>
+            <h1>ウィンドウ管理<br /><em>記憶する</em>。</h1>
+            <div class='hero-rest'>
+              <div class='hero-sub'>
+                モニターごとに各ウィンドウの位置を記憶 — 切り替え時に自動で復元。ドラッグ＆ドロップまたはショートカットで、ウィンドウを一瞬で並べ替え。
+              </div>
+              <div class='hero-cta'>
+                <a href='#' class='btn' data-download-link aria-label='macOS 版 Gridist をダウンロード'>
+                  <svg
+                    width='18'
+                    height='18'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    aria-hidden='true'
+                  >
+                    <path
+                      d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'
+                    />
+                  </svg>
+                  macOS 版をダウンロード
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class='hero-visual hero-visual--schematic' data-hero-visual>
+            <p class='profile-setup-label' data-mac-title>デスクトップモニター</p>
+            <div class='mac-frame'>
+              <div class='hero-demo-panels'>
+                <div class='hero-demo hero-demo-profile is-active' data-hero-panel='profile'>
+                  <div class='mac-screens' data-mac-screens>
+                    <div class='monitor monitor-primary'>
+                      <div class='monitor-inset'>
+                        <div class='window win-ide' data-window='ide'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>VS Code</span>
+                          </div>
+                        </div>
+                        <div class='window win-browser' data-window='browser'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Firefox</span>
+                          </div>
+                        </div>
+                        <div class='window win-slack' data-window='slack'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Slack</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='monitor monitor-secondary'>
+                      <div class='monitor-inset'>
+                        <div class='window win-mail hero-snap-window' data-window='mail'>
+                          <div class='win-chrome'>
+                            <span class='win-title'>Mail</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='hero-snap-layer' data-snap-layer hidden>
+                      <div class='hero-snap-mail-overlay'>
+                        <div class='hero-snap-ghost' aria-hidden='true'></div>
+                      </div>
+                      <div class='hero-snap-preview' aria-hidden='true'>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--vertical'>
+                          <div class='hero-snap-grid'>
+                            <div class='hero-snap-zone hero-snap-zone-tl'></div>
+                            <div class='hero-snap-zone hero-snap-zone-tr'></div>
+                            <div class='hero-snap-zone hero-snap-zone-bl'></div>
+                            <div class='hero-snap-zone hero-snap-zone-br'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--horizontal'>
+                          <div class='hero-snap-grid hero-snap-grid--horizontal'>
+                            <div class='hero-snap-zone hero-snap-zone-h-left'></div>
+                            <div class='hero-snap-zone hero-snap-zone-h-right'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--full'>
+                          <div class='hero-snap-grid hero-snap-grid--full'>
+                            <div class='hero-snap-zone hero-snap-zone-full'></div>
+                          </div>
+                        </div>
+                        <div class='hero-snap-preview-bezel hero-snap-preview-bezel--thirds'>
+                          <div class='hero-snap-grid hero-snap-grid--thirds'>
+                            <div class='hero-snap-zone hero-snap-zone-t-left'></div>
+                            <div class='hero-snap-zone hero-snap-zone-t-right'></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='hero-snap-cursor' aria-hidden='true'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class='demo-indicator'
+              data-demo-indicator
+              role='status'
+              aria-live='polite'
+              aria-label='ウィンドウメモリ'
+            >
+              <span class='demo-indicator-phase is-active' data-demo-phase='profile'
+                >ウィンドウメモリ</span
+              >
+              <span class='demo-indicator-phase' data-demo-phase='snap'>Window Snap</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='section list-section' id='features'>
+        <p class='hero-tag list-section__caption'>2つの機能。1つのアプリ。</p>
+        <div class='tile-grid'>
+          <ul class='feature-list'>
+            <li class='feature-tile'>
+              <span class='li-num' aria-hidden='true'>01</span>
+              <div>
+                <h2>ウィンドウメモリ</h2>
+                <p>
+                  各ウィンドウが<em>モニターごと</em>に位置を記憶 — 自動で、保存ボタン不要。モニターオフ、モニターオン — すべて元の位置に戻ります。
+                </p>
+                <ul class='feature-tile__points'>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    単一スナップショットではなく、ウィンドウとモニターごとの位置
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    ディスプレイフィンガープリントでノート PC とデスク環境を識別
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    パーセント座標 — あらゆる解像度に対応
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    イベント駆動の学習、アイドル時 CPU ゼロ
+                  </li>
+                </ul>
+                <a href='#fenster-gedaechtnis' class='btn btn-ghost'>仕組みを見る</a>
+              </div>
+            </li>
+            <li class='feature-tile'>
+              <span class='li-num' aria-hidden='true'>02</span>
+              <div>
+                <h2>Window Snap</h2>
+                <p>
+                  タイトルバーでウィンドウを掴み、ゾーン上にドラッグ — ゴーストプレビューで結果を表示。離すとスナップ。
+                </p>
+                <ul class='feature-tile__points'>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    ドラッグ中のレイアウトゾーン付きミニモニタープレビュー
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    レイアウトセット — 半分、四分割、三分割、カスタムゾーン
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    プリセットとゾーン用の編集可能なショートカット
+                  </li>
+                  <li>
+                    <span
+                      class='icon icon-cube compare-icon compare-icon--positive'
+                      aria-hidden='true'
+                    ></span>
+                    Option キーでスナップゾーンのオン/オフ切り替え
+                  </li>
+                </ul>
+                <a href='#window-snap' class='btn btn-ghost'>仕組みを見る</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class='section pitch' id='fenster-gedaechtnis'>
+        <div class='pitch-copy'>
+          <p class='hero-tag'>
+            <span class='li-num' aria-hidden='true'>01</span>
+            ウィンドウメモリ
+          </p>
+          <h2>モニターが消えても。<br />レイアウトはそのまま。</h2>
+          <div class='pitch-body'>
+            <p>
+              プロファイルの保存は不要。Gridist はモニターごとに各ウィンドウを記憶し、切り替え時に復元します。
+            </p>
+          </div>
+        </div>
+        <div
+          class='profile-demo profile-demo--schematic'
+          data-profile-section-demo
+          aria-hidden='true'
+        >
+          <p class='profile-setup-label' data-profile-demo-title>デスクトップモニター</p>
+          <div class='mac-frame'>
+            <div class='mac-screens is-single' data-profile-demo-screens>
+              <div class='monitor monitor-primary'>
+                <div class='monitor-inset'>
+                  <div class='window' data-profile-window='1'></div>
+                  <div class='window' data-profile-window='2'></div>
+                  <div class='window' data-profile-window='3'></div>
+                  <div class='window' data-profile-window='4'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class='profile-caption'>モニターオフ → レイアウト復元</p>
+        </div>
+        <ul class='feature-list'>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-layout-grid' aria-hidden='true'></span>
+              配置して忘れる
+            </h3>
+            <p>
+              ウィンドウを一度好みの位置に配置 — MacBook でもデスクでも、どこでも。Gridist がモニターごとに各位置を自動で記憶します。
+            </p>
+          </li>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-eye' aria-hidden='true'></span>
+              モニター変更を検知
+            </h3>
+            <p>
+              ケーブルの抜き差し — ディスプレイフィンガープリントが変わると Gridist が検知し、対応するウィンドウメモリを読み込みます。
+            </p>
+          </li>
+          <li class='feature-tile'>
+            <h3>
+              <span class='icon icon-rotate-ccw' aria-hidden='true'></span>
+              自動復元
+            </h3>
+            <p>
+              開いているすべてのウィンドウが、アクティブなモニター上の最後に記憶された位置に移動します。パーセント座標はあらゆる解像度に対応します。
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class='section pitch' id='window-snap'>
+        <div class='pitch-copy'>
+          <p class='hero-tag'>
+            <span class='li-num' aria-hidden='true'>02</span>
+            Window Snap
+          </p>
+          <h2>ドラッグ。離す。スナップ。</h2>
+          <div class='pitch-body'>
+            <p>
+              タイトルバーを掴んでドラッグ — レイアウトゾーン付きのミニモニタープレビューが表示されます。セルにホバーすると、ゴーストアウトラインで結果を表示。離す — 完了。
+            </p>
+            <ul class='feature-tile__points'>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                内蔵セット：半分、四分割、三分割、三分の二、全画面
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                重なりゾーン付きカスタムレイアウトセット
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                Option キーでゾーンのオン/オフ切り替え
+              </li>
+              <li>
+                <span
+                  class='icon icon-cube compare-icon compare-icon--positive'
+                  aria-hidden='true'
+                ></span>
+                プリセットとカスタムゾーン用の編集可能なショートカット
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='snap-demo snap-demo--schematic' data-snap-section-demo aria-hidden='true'>
+          <div class='mac-frame'>
+            <div class='mac-screens is-single' data-snap-demo-screens>
+              <div class='monitor monitor-secondary'>
+                <div class='monitor-inset'>
+                  <div class='window hero-snap-window' data-snap-window>
+                    <div class='win-chrome'>
+                      <span class='win-title' aria-hidden='true'>ウィンドウ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='hero-snap-layer' data-snap-layer hidden>
+                <div class='hero-snap-mail-overlay'>
+                  <div class='hero-snap-ghost' aria-hidden='true'></div>
+                </div>
+                <div class='hero-snap-preview' aria-hidden='true'>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--vertical'>
+                    <div class='hero-snap-grid'>
+                      <div class='hero-snap-zone hero-snap-zone-tl'></div>
+                      <div class='hero-snap-zone hero-snap-zone-tr'></div>
+                      <div class='hero-snap-zone hero-snap-zone-bl'></div>
+                      <div class='hero-snap-zone hero-snap-zone-br'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--horizontal'>
+                    <div class='hero-snap-grid hero-snap-grid--horizontal'>
+                      <div class='hero-snap-zone hero-snap-zone-h-left'></div>
+                      <div class='hero-snap-zone hero-snap-zone-h-right'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--full'>
+                    <div class='hero-snap-grid hero-snap-grid--full'>
+                      <div class='hero-snap-zone hero-snap-zone-full'></div>
+                    </div>
+                  </div>
+                  <div class='hero-snap-preview-bezel hero-snap-preview-bezel--thirds'>
+                    <div class='hero-snap-grid hero-snap-grid--thirds'>
+                      <div class='hero-snap-zone hero-snap-zone-t-left'></div>
+                      <div class='hero-snap-zone hero-snap-zone-t-right'></div>
+                    </div>
+                  </div>
+                </div>
+                <div class='hero-snap-cursor' aria-hidden='true'></div>
+              </div>
+            </div>
+          </div>
+          <p class='snap-caption'>ドラッグ → 離す → スナップ</p>
+        </div>
+      </section>
+      <section class='section how' id='so-arbeitest-du'>
+        <div class='how-intro'>
+          <p class='hero-tag'>使い方</p>
+          <h2>メニューと設定。</h2>
+        </div>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>いつでも手の届くところに</p>
+            <h3>メニューバー</h3>
+            <p>
+              メニューバーアイコンから、解像度付きの接続モニター一覧、必要に応じて位置情報付きの開いているウィンドウを確認できます。学習、自動復元、ショートカットスナップ、ドラッグスナップを個別に切り替え可能。設定と終了はその下にあります。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--menu' aria-hidden='true'>
+              <div class='gi-menu'>
+                <div class='gi-menu__row'>
+                  Built-in Retina Display — 3024 × 1964 <span class='gi-menu__menubar-icon'></span>
+                </div>
+                <div class='gi-menu__row is-selected'>
+                  DELL U2720Q — 3840 × 2160 <span class='gi-menu__check'></span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__action'>現在のウィンドウを非表示</div>
+                <div class='gi-menu__meta'>3 ウィンドウアクティブ · DELL U2720Q</div>
+                <div class='gi-menu__window'>
+                  <span>VS Code — gridist</span>
+                  <span>12%, 8% · 48% × 78%</span>
+                </div>
+                <div class='gi-menu__window'>
+                  <span>Firefox — Docs</span>
+                  <span>52%, 8% · 46% × 55%</span>
+                </div>
+                <div class='gi-menu__window'>
+                  <span>Mail — 受信トレイ</span>
+                  <span>52%, 66% · 46% × 28%</span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__toggle'>
+                  <span>ウィンドウ位置を記憶</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>モニター切り替え時に自動復元</span
+                  ><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>ショートカットでスナップ</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>ドラッグでスナップ</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__divider'></div>
+                <div class='gi-menu__action'>設定</div>
+                <div class='gi-menu__action'>終了</div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>ログインとアップデート</p>
+            <h3>一般</h3>
+            <p>
+              最初の設定タブで、ログイン時の Gridist 起動を任意で設定し、アップデートを管理できます。自動チェック、確認なしでインストール、または手動チェック。現在のバージョンはすぐ下に表示されます。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist 設定</span>
+              </div>
+              <div class='gi-tabs'>
+                <span class='is-active'>一般</span>
+                <span>ショートカット</span>
+                <span>レイアウトセット</span>
+                <span>配置</span>
+                <span>ウィンドウメモリ</span>
+              </div>
+              <div class='gi-pane'>
+                <div class='gi-menu__toggle'>
+                  <span>ログイン時に Gridist を起動</span><span class='gi-switch is-on'></span>
+                </div>
+                <p class='gi-pane__subhead'>アップデート</p>
+                <div class='gi-menu__toggle'>
+                  <span>アップデートを自動で確認</span><span class='gi-switch is-on'></span>
+                </div>
+                <div class='gi-menu__toggle'>
+                  <span>確認なしでアップデートをインストール</span><span class='gi-switch'></span>
+                </div>
+                <p class='gi-pane__caption'>現在のバージョン: 1.0.0</p>
+                <div class='gi-toolbar'>
+                  <span class='gi-btn'>今すぐ確認</span>
+                </div>
+                <p class='gi-pane__hint'>
+                  新しいバージョンを確認し、アプリ内で直接インストールできます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>Window Snap</p>
+            <h3>ショートカット</h3>
+            <p>
+              2列グリッドの基本ショートカットとカスタムショートカット：フィールドをクリックし、完全な組み合わせ（任意の修飾キー + キー）を押します。ミニプレビューでゾーンを表示、× で無効化。デフォルトは Rectangle と同じ — 四分割を含みます。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist 設定</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>一般</span>
+                <span class='is-active'>ショートカット</span>
+                <span>レイアウトセット</span>
+                <span>配置</span>
+                <span>ウィンドウメモリ</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__subhead'>基本</p>
+                <p class='gi-pane__caption'>
+                  フィールドをクリックし、Rectangle と同様に完全なキーの組み合わせ（任意の修飾キー +
+                  キー）を押します。
+                </p>
+                <div class='gi-shortcut-grid'>
+                  <div class='gi-shortcut'>
+                    <span>左 1/2</span><span class='gi-mini gi-mini--left'></span><kbd>⌃⌥←</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>右 1/2</span><span class='gi-mini gi-mini--right'></span><kbd>⌃⌥→</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>上 1/2</span><span class='gi-mini gi-mini--top'></span><kbd>⌃⌥↑</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>下 1/2</span><span class='gi-mini gi-mini--bottom'></span><kbd>⌃⌥↓</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>最大化</span><span class='gi-mini gi-mini--full'></span><kbd>⌃⌥↩</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>左上 1/4</span><span class='gi-mini gi-mini--qtl'></span
+                    ><kbd>⌃⌥U</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>右上 1/4</span><span class='gi-mini gi-mini--qtr'></span
+                    ><kbd>⌃⌥I</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>左下 1/4</span><span class='gi-mini gi-mini--qbl'></span
+                    ><kbd>⌃⌥J</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>右下 1/4</span><span class='gi-mini gi-mini--qbr'></span
+                    ><kbd>⌃⌥K</kbd><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>左 1/3</span><span class='gi-mini gi-mini--t1'></span><kbd>⌃⌥D</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>中央 1/3</span><span class='gi-mini gi-mini--t2'></span><kbd>⌃⌥F</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                  <div class='gi-shortcut'>
+                    <span>右 1/3</span><span class='gi-mini gi-mini--t3'></span><kbd>⌃⌥G</kbd
+                    ><span class='gi-x'>×</span>
+                  </div>
+                </div>
+                <p class='gi-pane__hint'>Esc でキャンセル · × でショートカットを無効化</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>あなたのゾーン、あなたのセット</p>
+            <h3>レイアウトセット</h3>
+            <p>
+              全画面、半分、四分割、三分割、三分の二を含むスナップテンプレート — プラスカスタムセット。各行にミニプレビュー、ゾーン名、デフォルト・変更済み・カスタムかを表示。+ で作成、ダブルクリックで編集、ドラッグで並べ替え。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist 設定</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>一般</span>
+                <span>ショートカット</span>
+                <span class='is-active'>レイアウトセット</span>
+                <span>配置</span>
+                <span>ウィンドウメモリ</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>レイアウトセット</p>
+                <div class='gi-set-list'>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--full gi-mini--lg'></span>
+                    <div>
+                      <strong>全画面</strong>
+                      <small>全画面</small>
+                      <small>デフォルト · ショートカット</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row is-selected'>
+                    <span class='gi-mini gi-mini--halves gi-mini--lg'></span>
+                    <div>
+                      <strong>左 / 右</strong>
+                      <small>左 1/2 · 右 1/2</small>
+                      <small>デフォルト · ショートカット</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--tb gi-mini--lg'></span>
+                    <div>
+                      <strong>上 / 下</strong>
+                      <small>上 1/2 · 下 1/2</small>
+                      <small>デフォルト · ショートカット</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--quarters gi-mini--lg'></span>
+                    <div>
+                      <strong>四分割</strong>
+                      <small>左上 · 右上 · …</small>
+                      <small>デフォルト · ショートカット</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                  <div class='gi-set-row'>
+                    <span class='gi-mini gi-mini--thirds gi-mini--lg'></span>
+                    <div>
+                      <strong>三分割</strong>
+                      <small>左 1/3 · 中央 1/3 · 右 1/3</small>
+                      <small>デフォルト · ショートカット</small>
+                    </div>
+                    <span class='gi-set-row__actions' aria-hidden='true'
+                      ><span></span><span></span
+                    ></span>
+                  </div>
+                </div>
+                <div class='gi-toolbar'>
+                  <span class='gi-btn'>+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>セットを編集</p>
+            <h3>レイアウトセットを編集</h3>
+            <p>
+              シートで 24×24 グリッド（16:9 表示）上にゾーンを描画。モード：新規ゾーンまたは領域を調整。各ゾーンに名前、パーセントのセルサイズ、必要に応じて独自のショートカット。内蔵セットはデフォルトにリセット可能。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--with-sheet' aria-hidden='true'>
+              <div class='gi-screen__frame'>
+                <div class='gi-chrome'>
+                  <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                  ><span class='gi-chrome__dot'></span>
+                  <span class='gi-chrome__title'>Gridist 設定</span>
+                </div>
+                <div class='gi-tabs'>
+                  <span>一般</span>
+                  <span>ショートカット</span>
+                  <span class='is-active'>レイアウトセット</span>
+                  <span>配置</span>
+                  <span>ウィンドウメモリ</span>
+                </div>
+                <div class='gi-sheet-scrim'></div>
+              </div>
+              <div class='gi-sheet'>
+                <p class='gi-sheet__title'>セットを編集</p>
+                <div class='gi-sheet__name'>
+                  <span>名前:</span>
+                  <span class='gi-field'>左 / 右</span>
+                </div>
+                <div class='gi-sheet__layout-head'>
+                  <span class='gi-pane__headline'>画面レイアウト</span>
+                  <span class='gi-pane__hint'>グリッド 24 × 24</span>
+                </div>
+                <div class='gi-mode-btns'>
+                  <span class='gi-btn is-active'>新規ゾーン</span>
+                  <span class='gi-btn'>領域を調整</span>
+                </div>
+                <div class='gi-editor'>
+                  <div class='gi-editor__zone gi-editor__zone--left'></div>
+                  <div class='gi-editor__zone gi-editor__zone--right is-selected'></div>
+                </div>
+                <p class='gi-pane__headline'>ゾーン</p>
+                <p class='gi-pane__hint'>
+                  ショートカットは基本ショートカット（Window Snap）から取得され、ここに事前入力されます。
+                </p>
+                <div class='gi-zone-head'>
+                  <span>名前</span><span>グリッド</span><span>ショートカット ⌃⌥</span>
+                </div>
+                <div class='gi-zone-row'>
+                  <span class='gi-field'>左 1/2</span>
+                  <span>12 × 24 セル · 50.0% × 100.0%</span>
+                  <kbd>⌃⌥←</kbd>
+                </div>
+                <div class='gi-zone-row is-selected'>
+                  <span class='gi-field'>右 1/2</span>
+                  <span>12 × 24 セル · 50.0% × 100.0%</span>
+                  <kbd>⌃⌥→</kbd>
+                </div>
+                <div class='gi-sheet__footer'>
+                  <span class='gi-btn'>デフォルトに戻す</span>
+                  <span class='gi-sheet__spacer'></span>
+                  <span class='gi-btn'>キャンセル</span>
+                  <span class='gi-btn gi-btn--accent'>完了</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row how-row--flip'>
+          <div class='how-copy'>
+            <p class='hero-tag'>画面の位置</p>
+            <h3>配置</h3>
+            <p>
+              ドラッグスナップ中のミニモニタープレビューを制御：アイコンの水平/垂直配置、スライダーによる画面上の位置、ピクセル単位のプレビュー幅。ゾーンプレビューを必要な位置に正確に配置できます。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist 設定</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>一般</span>
+                <span>ショートカット</span>
+                <span>レイアウトセット</span>
+                <span class='is-active'>配置</span>
+                <span>ウィンドウメモリ</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>向き</p>
+                <div class='gi-radio is-on'>アイコンを水平に配置</div>
+                <div class='gi-radio'>アイコンを垂直に配置</div>
+                <p class='gi-pane__headline'>画面の位置</p>
+                <div class='gi-placement'>
+                  <div class='gi-placement__monitor'>
+                    <div class='gi-placement__cluster'>
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class='gi-placement__vslider'><span></span></div>
+                  <div class='gi-placement__hslider'><span></span></div>
+                </div>
+                <p class='gi-pane__headline'>サイズ</p>
+                <div class='gi-stepper'>
+                  <span>プレビュー幅</span>
+                  <span class='gi-field'>220</span>
+                  <span class='gi-stepper__btns'>▾ ▴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class='how-row'>
+          <div class='how-copy'>
+            <p class='hero-tag'>保存された位置</p>
+            <h3>ウィンドウメモリ</h3>
+            <p>
+              モニターごとに記憶された位置を一覧表示：ウィンドウセッションとアプリデフォルト。「接続中」と表示されたモニターは現在接続されています。エントリにはタイトル、種類、パーセント矩形が表示されます。すべての位置を削除するとストレージが永久に消去されます。
+            </p>
+          </div>
+          <div class='how-visual'>
+            <div class='gi-screen gi-screen--settings' aria-hidden='true'>
+              <div class='gi-chrome'>
+                <span class='gi-chrome__dot'></span><span class='gi-chrome__dot'></span
+                ><span class='gi-chrome__dot'></span>
+                <span class='gi-chrome__title'>Gridist 設定</span>
+              </div>
+              <div class='gi-tabs'>
+                <span>一般</span>
+                <span>ショートカット</span>
+                <span>レイアウトセット</span>
+                <span>配置</span>
+                <span class='is-active'>ウィンドウメモリ</span>
+              </div>
+              <div class='gi-pane'>
+                <p class='gi-pane__headline'>保存された位置</p>
+                <p class='gi-pane__caption'>
+                  12 ウィンドウセッション · 4 アプリデフォルト — 復元用に記憶
+                </p>
+                <div class='gi-memory-monitors'>
+                  <div class='gi-menu__row is-selected'>
+                    Built-in Retina Display — 3024 × 1964 <span class='gi-badge'>接続中</span
+                    ><span class='gi-menu__check'></span>
+                  </div>
+                  <div class='gi-menu__row'>
+                    DELL U2720Q — 3840 × 2160 <span class='gi-badge'>接続中</span>
+                  </div>
+                </div>
+                <p class='gi-pane__meta'>8 件保存 · Built-in Retina Display</p>
+                <div class='gi-memory-list'>
+                  <div class='gi-menu__window'>
+                    <span>VS Code — gridist</span><span>セッション · 8%, 6% · 55% × 80%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Firefox</span><span>セッション · 64%, 6% · 34% × 50%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Slack</span><span>アプリデフォルト · 64%, 58% · 34% × 36%</span>
+                  </div>
+                  <div class='gi-menu__window'>
+                    <span>Mail</span><span>セッション · 8%, 70% · 40% × 24%</span>
+                  </div>
+                </div>
+                <div class='gi-toolbar gi-toolbar--end'>
+                  <span class='gi-btn gi-btn--danger'>すべての位置を削除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class='section download' id='download'>
+        <p class='hero-tag'>無料 · オープンソース · ネイティブ</p>
+        <h2>ダウンロード。</h2>
+        <div class='download-actions download-actions--large'>
+          <div class='download-action'>
+            <a
+              href='#'
+              class='btn btn-large'
+              data-download-link
+              aria-label='macOS 版 Gridist をダウンロード'
+            >
+              <svg
+                width='18'
+                height='18'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                aria-hidden='true'
+              >
+                <path
+                  d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'
+                />
+              </svg>
+              macOS 版をダウンロード
+            </a>
+            <span class='download-arch'>macOS 14+</span>
+          </div>
+          <div class='download-action'>
+            <a
+              href='#'
+              class='btn btn-ghost btn-large'
+              data-github-link
+              aria-label='GitHub で Gridist を見る'
+            >
+              <svg
+                width='18'
+                height='18'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                aria-hidden='true'
+              >
+                <path
+                  d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z'
+                />
+              </svg>
+              GitHub で見る
+            </a>
+          </div>
+        </div>
+        <p class='download-version'>バージョン <span data-release-version>0.0.0</span></p>
+        <div class='download-install'>
+          <article class='install-panel'>
+            <h3>インストール</h3>
+            <ol>
+              <li>GitHub からリリースをダウンロードしてアプリを開く</li>
+              <li>アクセシビリティと入力モニタリングを許可</li>
+              <li>ウィンドウを配置 — あとは Gridist が記憶</li>
+            </ol>
+          </article>
+        </div>
+      </section>

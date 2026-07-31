@@ -1,0 +1,55 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.legal {
+  width: var(--w-website);
+  margin-inline: auto;
+  padding: calc(var(--header-h) + 2rem) 0 6rem;
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 2.25rem;
+    margin-bottom: 0.875rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.625rem;
+  }
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 0.875rem;
+  }
+  ul {
+    margin: 0 0 1rem 1.25rem;
+    list-style: disc;
+  }
+  a {
+    color: var(--accent-bright);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    &:hover {
+      color: var(--accent);
+    }
+  }
+  .legal-source {
+    margin-top: 2.5rem;
+    font-size: 0.875rem;
+    color: var(--dim);
+  }
+}

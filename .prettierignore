@@ -1,0 +1,12 @@
+build
+dist
+.11ty-vite
+node_modules
+package-lock.json
+src/scss
+src/fonts
+src/_includes
+locales
+*.html
+*.min.js
+*.min.css

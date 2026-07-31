@@ -1,0 +1,81 @@
+<a class='skip-link' href='#main'>{{t.skipToContent}}</a>
+<div class='ambient' aria-hidden='true'></div>
+<div class='grain' aria-hidden='true'></div>
+<header class='header'>
+  <a class='wordmark' href='{{paths.home}}' aria-label='{{t.homeAria}}'>
+    <svg class='wordmark__mark' viewBox='0 0 32 32' aria-hidden='true'>
+      <rect x='2' y='2' width='12' height='12' rx='2' fill='currentColor' opacity='0.9' />
+      <rect x='18' y='2' width='12' height='12' rx='2' fill='currentColor' opacity='0.5' />
+      <rect x='2' y='18' width='12' height='12' rx='2' fill='currentColor' opacity='0.5' />
+      <rect x='18' y='18' width='12' height='12' rx='2' fill='currentColor' opacity='0.9' />
+    </svg>
+    {{site.name}}
+  </a>
+  <nav class='nav' aria-label='{{t.mainNavigation}}'>
+    {{#if langLinks.length}}
+      <div class='lang-switch'>
+        <details class='lang-dropdown' aria-label='{{locale.languageMenuAria}}'>
+          <summary class='lang-current' aria-label='{{t.language}}: {{locale.name}}'>
+            <svg
+              class='lang-icon'
+              width='15'
+              height='15'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+            >
+              <path d='m5 8 6 6' />
+              <path d='m4 14 6-6 2-3' />
+              <path d='M2 5h12' />
+              <path d='M7 2h1' />
+              <path d='m22 22-5-10-5 10' />
+              <path d='M14 18h6' />
+            </svg>
+            <span class='lang-current__label'>{{locale.name}}</span>
+            <svg
+              class='lang-chevron'
+              xmlns='http://www.w3.org/2000/svg'
+              width='14'
+              height='14'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              aria-hidden='true'
+            >
+              <path d='m6 9 6 6 6-6' />
+            </svg>
+          </summary>
+          <div class='lang-menu'>
+            {{#each langLinks}}
+              <a href='{{href}}' class='lang-link' hreflang='{{hreflang}}' lang='{{htmlLang}}'
+                >{{name}}</a
+              >
+            {{/each}}
+          </div>
+        </details>
+      </div>
+    {{/if}}
+    <a
+      href='{{site.githubUrl}}'
+      class='nav-github'
+      data-github-link
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='{{t.githubAria}}'
+    >
+      <svg width='22' height='22' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'>
+        <path
+          d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z'
+        />
+      </svg>
+    </a>
+    <a href='{{paths.home}}#download' class='nav-cta'>{{t.download}}</a>
+  </nav>
+</header>

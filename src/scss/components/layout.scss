@@ -1,0 +1,64 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+  }
+  &::before {
+    width: 95vmax;
+    height: 95vmax;
+    top: -32vmax;
+    left: -22vmax;
+    background: radial-gradient(
+      circle,
+      hsl(142 71% 45% / 0.24) 0%,
+      hsl(145 55% 28% / 0.12) 32%,
+      hsl(150 45% 14% / 0.05) 52%,
+      transparent 72%
+    );
+  }
+  &::after {
+    width: 85vmax;
+    height: 85vmax;
+    bottom: -28vmax;
+    right: -18vmax;
+    background: radial-gradient(
+      circle,
+      hsl(148 70% 32% / 0.2) 0%,
+      hsl(150 55% 18% / 0.09) 35%,
+      hsl(155 40% 10% / 0.03) 55%,
+      transparent 75%
+    );
+  }
+}
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgb(74 222 128 / 0.035) 0.0625rem, transparent 0.0625rem),
+    linear-gradient(90deg, rgb(74 222 128 / 0.035) 0.0625rem, transparent 0.0625rem);
+  background-size: 3rem 3rem;
+}
+.section {
+  width: var(--w-website);
+  margin-inline: auto;
+}
+.section:not(.hero) {
+  padding-top: var(--section-gap);
+}
+main > .section:last-child {
+  padding-bottom: var(--section-gap);
+}

@@ -1,0 +1,48 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+:root {
+  --bg: #0a1410;
+  --bg-2: #0f1c16;
+  --surface: #142820;
+  --surface-2: #1a3328;
+  --line: rgb(74 222 128 / 0.12);
+  --line-strong: rgb(74 222 128 / 0.28);
+  --text: #e8f5ee;
+  --muted: #8fb5a0;
+  --dim: #5d8a72;
+  --accent: #4ade80;
+  --accent-bright: #6ee7a0;
+  --accent-dim: #22c55e;
+  --accent-glow: rgb(74 222 128 / 0.35);
+  --forest: #1d4830;
+  --forest-deep: #153322;
+  --display: 'Sora', system-ui, sans-serif;
+  --sans: 'DM Sans', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'SF Mono', menlo, monaco, 'Cascadia Mono', monospace;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --shadow-glow: 0 0 5rem var(--accent-glow);
+  --shadow-card: 0 0.25rem 1.5rem rgb(0 0 0 / 0.4);
+  --glass-blur: blur(1.25rem) saturate(1.45);
+  --glass-bg: rgb(14 28 22 / 0.38);
+  --glass-bg-elevated: rgb(20 40 32 / 0.48);
+  --glass-border: rgb(255 255 255 / 0.09);
+  --glass-highlight: inset 0 0.0625rem 0 rgb(255 255 255 / 0.07);
+  --schematic-window-fill: rgb(4 10 7 / 0.88);
+  --schematic-window-stroke: rgb(74 222 128 / 0.55);
+  --header-h: clamp(3.25rem, 2.4rem + 2.8vw, 5rem);
+  --w-website: min(80rem, calc(100% - 3rem));
+  --section-gap: clamp(5.5rem, 11vw, 13rem);
+  --tracking-tight: -0.02em;
+  --tracking: 0.025em;
+  --size-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --size-label: clamp(0.938rem, 1.2vw, 1.125rem);
+  --size-caption: clamp(0.75rem, 0.7rem + 0.2vw, 0.8125rem);
+  --size-ui: clamp(0.875rem, 0.85rem + 0.15vw, 0.9375rem);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 0.25s var(--ease-out);
+}
