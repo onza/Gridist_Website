@@ -1,10 +1,10 @@
 # Gridist Website
 
-[![Build](https://github.com/onza/Gridist_Website/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/onza/gridist_website/actions/workflows/deploy-pages.yml)
+[![Build](https://github.com/onza/Gridist_Website/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/onza/Gridist_Website/actions/workflows/deploy-pages.yml)
 
-Static marketing website for [Gridist](https://gridist.app).
+Static marketing website for [Gridist](https://github.com/onza/Gridist).
 
-Built with [Eleventy](https://www.11ty.dev/) and [Vite](https://vitejs.dev/) (`@11ty/eleventy-plugin-vite`).
+Built with Eleventy and Vite.
 
 ## Translations
 
@@ -13,11 +13,11 @@ Translations were **generated with AI** and may contain errors or awkward wordin
 **Content per language:**
 
 ```text
-locales/de/
-  site.yaml         UI, SEO
+locales/en/
   home-main.html
   legal.html
   privacy.html
+  site.yaml         UI, SEO
 ```
 
 ## License
