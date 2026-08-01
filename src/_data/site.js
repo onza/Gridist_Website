@@ -17,10 +17,10 @@ export default {
   app: {
     repo: 'onza/Gridist',
     fallback: {
-      tag: 'v0.1.1',
-      version: '0.1.1',
+      tag: 'v0.1.5',
+      version: '0.1.5',
       macos: {
-        url: 'https://github.com/onza/Gridist/releases/download/v0.1.1/Gridist-0.1.1.dmg',
+        url: 'https://github.com/onza/Gridist/releases/download/v0.1.5/Gridist-0.1.5.dmg',
       },
     },
   },
