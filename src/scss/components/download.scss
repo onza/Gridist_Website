@@ -31,14 +31,15 @@
   text-align: center;
   h2 {
     font-family: var(--display);
-    font-size: clamp(2.25rem, 6vw, 3.75rem);
+    font-size: var(--size-hero);
     font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 1rem;
+    overflow-wrap: anywhere;
   }
   > p:not(.hero-tag) {
-    font-size: 1.125rem;
+    font-size: var(--size-body-lg);
     color: var(--muted);
     margin-bottom: 2rem;
     max-width: 35rem;
@@ -46,7 +47,7 @@
   }
   .download-version {
     font-family: var(--mono);
-    font-size: 0.8125rem;
+    font-size: var(--size-caption);
     letter-spacing: 0.04em;
     color: var(--dim);
     margin-top: 1.25rem;
@@ -63,7 +64,7 @@
 }
 .install-panel {
   h3 {
-    font-size: 1.125rem;
+    font-size: var(--size-h4);
     font-weight: 600;
     margin: 0 0 1rem;
   }
@@ -74,7 +75,7 @@
     li {
       line-height: 1.65;
       margin-bottom: 0.5rem;
-      font-size: 1.125rem;
+      font-size: var(--size-body-lg);
     }
   }
 }

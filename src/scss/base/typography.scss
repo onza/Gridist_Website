@@ -5,7 +5,7 @@
 
 body {
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: var(--size-body);
   line-height: 1.6;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -19,10 +19,27 @@ h6 {
   font-weight: 600;
   line-height: 1.15;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 h1,
 h2 {
   font-family: var(--display);
+}
+h1 {
+  font-size: var(--size-h1);
+  letter-spacing: var(--tracking-tight);
+}
+h2 {
+  font-size: var(--size-h2);
+  letter-spacing: var(--tracking-tight);
+}
+h3 {
+  font-size: var(--size-h3);
+  letter-spacing: var(--tracking);
+}
+h4 {
+  font-size: var(--size-h4);
+  letter-spacing: var(--tracking);
 }
 p {
   color: var(--muted);

@@ -13,12 +13,13 @@
     align-self: stretch;
     h2 {
       font-family: var(--display);
-      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      font-size: var(--size-hero);
       font-weight: 600;
       letter-spacing: -0.03em;
       line-height: 1.1;
       max-width: none;
       margin-inline: auto;
+      overflow-wrap: anywhere;
     }
   }
 }
@@ -52,13 +53,13 @@
 .how-copy {
   h3 {
     font-family: var(--display);
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: var(--size-h2);
     font-weight: 600;
     letter-spacing: -0.02em;
     margin: 0 0 0.75rem;
   }
   > p:not(.hero-tag) {
-    font-size: 1.125rem;
+    font-size: var(--size-body-lg);
     color: var(--muted);
     line-height: 1.65;
     margin: 0;

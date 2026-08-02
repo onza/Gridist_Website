@@ -10,6 +10,7 @@
   align-items: start;
   padding-bottom: 0.5rem;
   .pitch-copy {
+    min-width: 0;
     .li-num {
       display: inline-block;
       margin-right: 0.5em;
@@ -24,18 +25,19 @@
     }
     h2 {
       font-family: var(--display);
-      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      font-size: var(--size-hero);
       font-weight: 600;
       letter-spacing: -0.03em;
       line-height: 1.1;
       margin-bottom: 1.25rem;
-      max-width: 22ch;
+      max-width: min(22ch, 100%);
       text-align: left;
+      overflow-wrap: anywhere;
     }
     .pitch-body {
       min-width: 0;
       > p {
-        font-size: 1.125rem;
+        font-size: var(--size-body-lg);
         max-width: 32.5rem;
         color: var(--muted);
       }

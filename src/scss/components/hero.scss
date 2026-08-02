@@ -26,24 +26,39 @@
   }
   .hero-copy {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     @media (min-width: 60rem) {
       width: 40rem;
       max-width: 100%;
+      align-items: flex-start;
+      text-align: left;
     }
   }
   .hero-tag {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    @media (min-width: 60rem) {
+      justify-content: flex-start;
+    }
   }
   h1 {
     font-family: var(--display);
-    font-size: clamp(2.7rem, 9vw, 5.4rem);
+    font-size: var(--size-hero);
     font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.05;
     margin: 0;
     width: 100%;
+    text-align: center;
+    overflow-wrap: anywhere;
+    @media (min-width: 60rem) {
+      text-align: left;
+    }
     em {
       font-style: normal;
       background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-dim) 60%, #86efac 100%);
@@ -55,20 +70,33 @@
   .hero-rest {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.5rem;
     min-width: 0;
+    width: 100%;
     margin-top: clamp(1.5rem, 3vw, 2.5rem);
+    @media (min-width: 60rem) {
+      align-items: flex-start;
+    }
   }
   .hero-sub {
-    font-size: clamp(1.125rem, 1rem + 0.65vw, 1.5rem);
+    font-size: var(--size-body-lg);
     line-height: 1.6;
     color: var(--muted);
     max-width: none;
+    text-align: center;
+    @media (min-width: 60rem) {
+      text-align: left;
+    }
   }
   .hero-cta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    justify-content: center;
+    @media (min-width: 60rem) {
+      justify-content: flex-start;
+    }
   }
   .hero-visual {
     display: flex;
